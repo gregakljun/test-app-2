@@ -4,10 +4,11 @@ export default function SignInPage() {
   return <SignIn />;
 }
 
-// Named export for generateStaticParams
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  // Define the static paths for this route
   return [
-    // If you have possible values for your dynamic segment (e.g. `sign-in/something`), include them here.
-    { signIn: [] }, // Example static params for the route
+    { signIn: [] },          // Matches `/` or `/sign-in`
+    { signIn: ['example'] }, // Matches `/sign-in/example`
+    // Add more paths as needed
   ];
 }
