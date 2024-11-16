@@ -8,6 +8,6 @@ export default function SignUpPage() {
 export function generateStaticParams() {
   return [
     // If you have possible values for your dynamic segment (e.g. `sign-in/something`), include them here.
-    { signIn: [] },  // Example static params for the route
+    { signUp: [] },  // Example static params for the route
   ];
 }
