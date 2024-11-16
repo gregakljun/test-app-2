@@ -4,10 +4,10 @@ export default function SignInPage() {
   return <SignIn />;
 }
 
-// You need to provide generateStaticParams for dynamic routes
-export default function generateStaticParams() {
+// Named export for generateStaticParams
+export function generateStaticParams() {
   return [
     // If you have possible values for your dynamic segment (e.g. `sign-in/something`), include them here.
-    { signIn: [] },  // Example static params for the route
+    { signIn: [] }, // Example static params for the route
   ];
 }
