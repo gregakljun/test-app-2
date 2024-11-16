@@ -19,6 +19,13 @@ import { canCustomizeBanner, canRemoveBranding } from "@/server/permissions"
 import { auth } from "@clerk/nextjs/server"
 import { notFound } from "next/navigation"
 
+export function generateStaticParams() {
+  return [
+    // If you have possible values for your dynamic segment (e.g. `sign-in/something`), include them here.
+    { productId: [] },  // Example static params for the route
+  ];
+}
+
 export default async function EditProductPage({
   params: { productId },
   searchParams: { tab = "details" },
